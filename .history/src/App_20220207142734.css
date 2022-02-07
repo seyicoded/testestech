@@ -107,7 +107,7 @@
 .Container .right .card .c-left{
   width: 30%;
   background: linear-gradient(pink, lightgreen);
-  height: auto;
+  height: 160px;
   margin-right: 1%
 }
 
@@ -121,8 +121,7 @@
   color: #c1d1e8;
 }
 .Container .right .card .c-right .main h1{
-  color: white;
-  margin-bottom: 0px;
+  color: white
 }
 .Container .right .card .c-right .sub{
   width: 60px;

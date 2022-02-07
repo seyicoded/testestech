@@ -8,39 +8,6 @@ function App() {
   const [data, setdata] = useState([]);
   const [unfilterdata, setunfilterdata] = useState([]);
 
-  const search = (val)=>{
-    const aaa = val.target.value;
-    console.log(aaa);
-    var new_data = [];
-    var count = 0;
-    data.forEach(element => {
-      if( ((element.name).search(aaa) != -1) ){
-        new_data[count] = element;
-        count++;
-      }
-
-    });
-
-    setdata(new_data)
-  }
-
-  const sort = (val)=>{
-    const aaa = val.target.value;
-    console.log(aaa)
-
-    var new_data = [];
-    var count = 0;
-    data.forEach(element => {
-      if( ((element.name).search(aaa) != -1) ){
-        new_data[count] = element;
-        count++;
-      }
-
-    });
-
-    setdata(new_data)
-  }
-
   useEffect(()=>{
     // console.log('reached')
     (async()=>{
@@ -72,9 +39,7 @@ function App() {
             <div className='content'>
               <label className='w3-label'>Name (Contains)</label>
               <br />
-              <input onKeyUp={(val=>{
-                search(val)
-              })} className='w3-input' placeholder='By Name'/>
+              <input className='w3-input' placeholder='By Name'/>
             </div>
 
             <br />
@@ -84,8 +49,7 @@ function App() {
               <br />
               <div className='orderby'>
                 <i class="fa fa-futboll"></i>
-                <select className='w3-select' onChange={(val)=>{sort(val)}}>
-                  <option>select a filter</option>
+                <select>
                   <option value={'date'}>release date</option>
                   <option value={'rate'}>rating</option>
                 </select>

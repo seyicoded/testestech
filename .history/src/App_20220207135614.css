@@ -55,19 +55,17 @@
 .Container .left{
   width: 30%;
   height: 100%;
-  padding-top: 3%;
-  padding-left: 5%;
+  padding-left: 15%;
 }
 
 .Container .right{
   flex: 1;
   height: 100%;
-  padding: 3%;
-  overflow: auto;
 }
 
 .Container .left .card{
-  padding: 10%;
+  padding: 40;
+  padding: 5%;
   background: #0e1a2b;
 }
 .Container .left .card .content{
@@ -95,46 +93,3 @@
 .btn-container .w3-btn{
   background: #5692e8;
 }
-
-.Container .right .card{
-  background: #0e1a2b;
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 3%;
-
-}
-
-.Container .right .card .c-left{
-  width: 30%;
-  background: linear-gradient(pink, lightgreen);
-  height: auto;
-  margin-right: 1%
-}
-
-.Container .right .card .c-right{
-  display: flex;
-  flex: 1;
-  flex-direction: row;
-}
-.Container .right .card .c-right .main{
-  flex: 1;
-  color: #c1d1e8;
-}
-.Container .right .card .c-right .main h1{
-  color: white;
-  margin-bottom: 0px;
-}
-.Container .right .card .c-right .sub{
-  width: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.Container .right .card .c-right .sub span{
-  /* width: 60px; */
-  background: #5692e8;
-  padding: 8px;
-  font-size: 8px;
-  
-}
-

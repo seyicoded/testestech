@@ -107,7 +107,7 @@
 .Container .right .card .c-left{
   width: 30%;
   background: linear-gradient(pink, lightgreen);
-  height: auto;
+  height: 160px;
   margin-right: 1%
 }
 
@@ -117,12 +117,7 @@
   flex-direction: row;
 }
 .Container .right .card .c-right .main{
-  flex: 1;
-  color: #c1d1e8;
-}
-.Container .right .card .c-right .main h1{
-  color: white;
-  margin-bottom: 0px;
+  flex: 1
 }
 .Container .right .card .c-right .sub{
   width: 60px;
@@ -133,8 +128,7 @@
 .Container .right .card .c-right .sub span{
   /* width: 60px; */
   background: #5692e8;
-  padding: 8px;
-  font-size: 8px;
-  
+  /* padding: 4px; */
+
 }
 

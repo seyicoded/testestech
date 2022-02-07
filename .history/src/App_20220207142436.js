@@ -8,39 +8,6 @@ function App() {
   const [data, setdata] = useState([]);
   const [unfilterdata, setunfilterdata] = useState([]);
 
-  const search = (val)=>{
-    const aaa = val.target.value;
-    console.log(aaa);
-    var new_data = [];
-    var count = 0;
-    data.forEach(element => {
-      if( ((element.name).search(aaa) != -1) ){
-        new_data[count] = element;
-        count++;
-      }
-
-    });
-
-    setdata(new_data)
-  }
-
-  const sort = (val)=>{
-    const aaa = val.target.value;
-    console.log(aaa)
-
-    var new_data = [];
-    var count = 0;
-    data.forEach(element => {
-      if( ((element.name).search(aaa) != -1) ){
-        new_data[count] = element;
-        count++;
-      }
-
-    });
-
-    setdata(new_data)
-  }
-
   useEffect(()=>{
     // console.log('reached')
     (async()=>{
@@ -72,9 +39,7 @@ function App() {
             <div className='content'>
               <label className='w3-label'>Name (Contains)</label>
               <br />
-              <input onKeyUp={(val=>{
-                search(val)
-              })} className='w3-input' placeholder='By Name'/>
+              <input className='w3-input' placeholder='By Name'/>
             </div>
 
             <br />
@@ -84,19 +49,13 @@ function App() {
               <br />
               <div className='orderby'>
                 <i class="fa fa-futboll"></i>
-                <select className='w3-select' onChange={(val)=>{sort(val)}}>
-                  <option>select a filter</option>
-                  <option value={'date'}>release date</option>
-                  <option value={'rate'}>rating</option>
-                </select>
+                <input className='w3-input' placeholder='By Name'/>
               </div>
 
               <br />
 
               <div className='btn-container'>
-                <button className='w3-btn w3-round' onClick={()=>{
-                  setdata(unfilterdata)
-                }}>Clear</button>
+                <button className='w3-btn w3-round'>Clear</button>
               </div>
               
             </div>
@@ -117,13 +76,12 @@ function App() {
                         <div>
                           Release Date: {new Date(item.first_release_date).toDateString()}
                         </div>
-                        <br />
                         <div>
                           {item.summary}
                         </div>
                       </div>
                       <div className='sub'>
-                        <span className='w3-circle'>{item.rating}</span>
+                        <span>{item.rating}</span>
                         
                       </div>
                     </div>

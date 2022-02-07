@@ -9,12 +9,10 @@ function App() {
   const [unfilterdata, setunfilterdata] = useState([]);
 
   const search = (val)=>{
-    const aaa = val.target.value;
-    console.log(aaa);
     var new_data = [];
     var count = 0;
     data.forEach(element => {
-      if( ((element.name).search(aaa) != -1) ){
+      if( ((element.name).search(val) != -1) ){
         new_data[count] = element;
         count++;
       }
@@ -25,20 +23,7 @@ function App() {
   }
 
   const sort = (val)=>{
-    const aaa = val.target.value;
-    console.log(aaa)
-
-    var new_data = [];
-    var count = 0;
-    data.forEach(element => {
-      if( ((element.name).search(aaa) != -1) ){
-        new_data[count] = element;
-        count++;
-      }
-
-    });
-
-    setdata(new_data)
+    console.log(val)
   }
 
   useEffect(()=>{
@@ -72,7 +57,7 @@ function App() {
             <div className='content'>
               <label className='w3-label'>Name (Contains)</label>
               <br />
-              <input onKeyUp={(val=>{
+              <input onKeyUp={}={(val=>{
                 search(val)
               })} className='w3-input' placeholder='By Name'/>
             </div>
