@@ -27,15 +27,10 @@ function App() {
   const sort = (val)=>{
     const aaa = val.target.value;
     console.log(aaa)
-    
-    var loop_data = data;
-    if(loop_data === []){
-      loop_data = unfilterdata;
-    }
 
     var new_data = [];
     var count = 0;
-    loop_data.forEach(element => {
+    data.forEach(element => {
       if( ((element.name).search(aaa) !== -1) ){
         new_data[count] = element;
         count++;
